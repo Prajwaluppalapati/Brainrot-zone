@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="https://s2.coinmarketcap.com/static/img/coins/200x200/33448.png" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="certificate.css">
+  <title>Brain rot zone | Certificate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="certificate">
+    <img src="This is to certify.png" id="cert-bg" />
+    <div id="name">Name</div>
+    <div id="score">Score%</div>
+  </div>
+
+  <a id="downloadLink">Download Certificate</a>
+
+  <!-- html2canvas library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    // Get values from URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const userName = params.get("name") || "Anonymous";
+    const userScore = params.get("score") || "0";
+
+    document.getElementById("name").textContent = userName;
+    document.getElementById("score").textContent = userScore + "%";
+
+    const downloadLink = document.getElementById("downloadLink");
+    const certificate = document.getElementById("certificate");
+
+    // Make certificate downloadable as image
+    downloadLink.addEventListener("click", () => {
+      html2canvas(certificate).then(canvas => {
+        downloadLink.href = canvas.toDataURL("image/png");
+        downloadLink.download = `${userName}_brainrot_certificate.png`;
+      });
+    });
+  </script>
+</body>
+</html>

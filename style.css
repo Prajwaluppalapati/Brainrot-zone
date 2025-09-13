@@ -1,0 +1,327 @@
+body{
+    background: rgb(7, 0, 37);
+}
+
+/* Page 1 */
+.p1_main_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.Start{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-family: 'Jersey 20';
+    font-size: 40px;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 120px;
+    text-align: center;
+}   
+
+.Start:hover{
+    background-color: white;
+    color: rgb(7, 0, 37);
+    cursor: pointer;
+}
+
+.main_h_cnt{
+    animation: float 3s ease-in-out infinite;
+}
+
+.brain_emj{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: -120px;
+    font-size: 150px;
+    z-index: 1;
+}
+
+.face_emj{
+    position: absolute;
+    margin-top: -380px;
+    margin-left: 1040px;
+    rotate: 20deg;
+    font-size: 130px;
+    z-index: 1;
+}
+
+.main_h{
+    color: white;
+    text-align: center;
+    font-family: 'Jersey 20';
+    font-size: 120px;
+    font-weight: 300;
+    animation: flicker 4s infinite;
+    vertical-align: middle;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes flicker {
+    0%, 85%, 100% {
+        text-shadow: none;
+        opacity: 1;
+    }
+    86%, 88% {
+        text-shadow: 0 0 8px #fff, 0 0 16px #00faff, 0 0 24px #00faff;
+        opacity: 0.9;
+    }
+    89%, 90% {
+        text-shadow: none;
+        opacity: 0.8;
+    }
+    91%, 94% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #00faff, 0 0 30px #00faff;
+        opacity: 1;
+    }
+}
+
+.watermark{
+    color: white;
+    font-family: century gothic;
+}
+
+/* Page 2 */
+.p2_main_div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+}
+
+.instructions{
+    color: white;
+    text-align: center;
+    font-family: 'Jersey 20';
+    font-size: 80px;
+    font-weight: 300;
+}
+
+.ins_txt{
+    color: white;
+    font-family: 'Jersey 20';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0; /* start hidden */
+    animation: fadeIn 2s ease-in forwards; /* fade in over 2s */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.ins_cnt{
+    text-align: left;
+    padding: 20px 50px 20px 50px;
+    background: rgb(1, 0, 27);
+    border: 1px solid rgba(255, 255, 255, 0.543);
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.enter_game{
+    padding: 10px 20px 10px 20px;
+    background: rgb(0, 0, 24);
+    border: 2px solid white;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: century gothic;
+    border-radius: 10px;
+    margin-left: 1200px;
+    font-weight: 550;
+    transition: background-color 0.3s, color 0.3s;  
+}
+
+.enter_game:hover{
+    background-color: white;
+    color: rgb(7, 0, 37);
+    cursor: pointer;
+}
+
+/* Page 3 */
+
+.p3_main_div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+      gap: 10px;
+}
+.game_cnt{
+    text-align: center;
+    background: rgb(1, 0, 27);
+    border: 1px solid rgba(255, 255, 255, 0.543);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    padding-top: 20px;
+    display: grid;
+}
+
+#startBtn{
+    display: block; 
+      margin: 10px auto; 
+      padding: 12px; 
+      width: 20%; 
+      border: none; 
+      border-radius: 8px; 
+      background: #44444400; 
+      color: #fff; 
+      font-size: 30px; 
+      cursor: pointer; 
+      transition: 0.3s;
+      border: 2px solid #ffffff;
+      font-family: 'jersey 20';
+      animation: float 3s ease-in-out infinite;
+}
+
+#startBtn:hover { 
+    box-shadow: #00faff 0 0 8px, #00faff 0 0 16px, #00faff 0 0 24px;
+    border: 2px solid #00faff;
+    color: #00faff;
+    text-shadow: #00faff 0 0 8px, #00faff 0 0 16px, #00faff 0 0 24px;
+ }
+
+ .question {
+     font-size: 50px;
+     color: white;
+     font-family: 'Jersey 20';
+      margin-bottom: 20px;
+     }
+
+    .options { 
+        margin-bottom: 20px;
+     }
+
+    .option { 
+      display: block; 
+      margin: 10px auto; 
+      padding: 12px; 
+      width: 80%; 
+      border: none; 
+      border-radius: 8px; 
+      background: #44444400; 
+      color: #fff; 
+      font-size: 30px; 
+      cursor: pointer; 
+      transition: 0.3s;
+      border: 2px solid #ffffff;
+      font-family: 'jersey 20';
+    }
+
+    .option:hover { background: #666; }
+    #nextBtn{
+      display: block; 
+      margin: 10px auto; 
+      padding: 12px; 
+      width: 20%; 
+      border: none; 
+      border-radius: 8px; 
+      background: #44444400; 
+      color: #fff; 
+      font-size: 30px; 
+      cursor: pointer; 
+      transition: 0.3s;
+      border: 2px solid #ffffff;
+      font-family: 'jersey 20';
+    }
+
+#restartBtn{
+    display: block; 
+      margin: 10px auto; 
+      padding: 12px; 
+      width: 60%; 
+      border: none; 
+      border-radius: 8px; 
+      background: #44444400; 
+      color: #fff; 
+      font-size: 30px; 
+      cursor: pointer; 
+      transition: 0.3s;
+      border: 2px solid #ffffff;
+      font-family: 'jersey 20';
+}
+
+    #nextBtn:hover, #restartBtn:hover { 
+       background: #666;
+     }
+
+    #nextBtn, #restartBtn { display: none; }
+    #result { 
+        margin-top: 20px; 
+        font-size: 40px;
+        color: #fff;
+        font-family: 'jersey 20';
+    }
+    .watermark { margin-top: 30px; font-size: 14px; color: #aaa; }
+    .quiz-page { display: none; }
+
+
+/* Certificate section wrapper */
+#certificateSection {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  font-family: 'Jersey 20';
+  font-size: 24px;
+}
+
+#certificateSection input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  background: rgba(0, 0, 24, 0.8);
+  color: #fff;
+  font-family: 'Jersey 20';
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+#certificateSection input:focus {
+  border-color: #00faff;
+  box-shadow: 0 0 10px #00faff;
+}
+
+/* Get Certificate Button */
+#goToCertBtn {
+  padding: 12px 20px;
+  background: rgba(0, 0, 24, 0.8);
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: 'Jersey 20';
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: float 3s ease-in-out infinite;
+}
+
+#goToCertBtn:hover {
+  border-color: #00faff;
+  color: #00faff;
+  text-shadow: 0 0 10px #00faff, 0 0 20px #00faff;
+  box-shadow: 0 0 12px #00faff, 0 0 24px #00faff;
+}
